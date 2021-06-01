@@ -1,4 +1,4 @@
-import { Greeting } from './components'
+import { Greeting } from '@/components/Greeting'
 import { createUseStyles } from 'react-jss'
 
 function App() {
