@@ -1,24 +1,15 @@
-import { Greeting, BottomBar } from '@/components'
-import { createUseStyles } from 'react-jss'
+import { Root } from '@/components'
+import { BrowserRouter as Router, Route, Switch, Redirect } from 'react-router-dom'
 
 function App() {
-  const classes = useStyles()
   return (
-    <div className={classes.appWrapper}>
-      <Greeting />
-      <BottomBar />
-    </div>
+    <Router>
+      <Switch>
+        <Route exact path="/" render={props => <Root {...props} />} />
+        <Redirect path="*" to="/" />
+      </Switch>
+    </Router>
   )
 }
-
-const useStyles = createUseStyles({
-  appWrapper: {
-    width: '100vw',
-    height: '100vh',
-    display: 'flex',
-    flexDirection: 'column',
-    justifyContent: 'space-between'
-  }
-})
 
 export default App
