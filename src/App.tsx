@@ -1,15 +1,18 @@
-import { Root } from '@/components'
-import { BrowserRouter as Router, Route, Switch, Redirect } from 'react-router-dom'
+import { Root, BottomBar } from '@/components'
+import { createUseStyles } from 'react-jss'
 
 function App() {
+  const classes = useStyles()
   return (
-    <Router>
-      <Switch>
-        <Route exact path="/" render={props => <Root {...props} />} />
-        <Redirect path="*" to="/" />
-      </Switch>
-    </Router>
+    <div className={classes.root}>
+      <Root />
+      <BottomBar />
+    </div>
   )
 }
+
+const useStyles = createUseStyles({
+  root: { display: 'flex', flexDirection: 'column', height: '100vh' }
+})
 
 export default App

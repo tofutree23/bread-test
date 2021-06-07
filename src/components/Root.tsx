@@ -1,25 +1,28 @@
-import { Greeting, BottomBar } from '@/components'
+import { Greeting, TestContents } from '@/components'
 import { createUseStyles } from 'react-jss'
-import { RouteComponentProps } from 'react-router-dom'
+import { BrowserRouter as Router, Route, Switch, Redirect } from 'react-router-dom'
 
-const Root = ({ ...props }: RouteComponentProps) => {
+const Root = ({ ...props }) => {
   const classes = useStyles()
 
   return (
     <div className={classes.appWrapper}>
-      <Greeting />
-      <BottomBar />
+      <Router>
+        <Switch>
+          <Route exact path="/" render={props => <Greeting {...props} />} />
+          <Route path="/test" render={props => <TestContents {...props} />} />
+          <Redirect path="*" to="/" />
+        </Switch>
+      </Router>
     </div>
   )
 }
 
 const useStyles = createUseStyles({
   appWrapper: {
-    width: '100vw',
-    height: '100vh',
-    display: 'flex',
-    flexDirection: 'column',
-    justifyContent: 'space-between'
+    width: '50vw',
+    height: 'auto',
+    margin: '0 auto'
   }
 })
 
