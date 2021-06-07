@@ -1,4 +1,4 @@
-import { Greeting, TestContents } from '@/components'
+import { Greeting, TestContents, Result } from '@/components'
 import { createUseStyles } from 'react-jss'
 import { BrowserRouter as Router, Route, Switch, Redirect } from 'react-router-dom'
 
@@ -11,6 +11,7 @@ const Root = ({ ...props }) => {
         <Switch>
           <Route exact path="/" render={props => <Greeting {...props} />} />
           <Route path="/test" render={props => <TestContents {...props} />} />
+          <Route path="/result/:bread" render={props => <Result {...props} />} />
           <Redirect path="*" to="/" />
         </Switch>
       </Router>

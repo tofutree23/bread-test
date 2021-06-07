@@ -1,5 +1,6 @@
 import { FC, useState } from 'react'
 import { createUseStyles } from 'react-jss'
+import { useHistory } from 'react-router-dom'
 
 import { TestContents as tests } from '@/res/contents/test'
 
@@ -10,13 +11,20 @@ interface TestContentsProps {}
 const TestContents: FC<TestContentsProps> = ({ ...props }) => {
   const [q, setQ] = useState<number>(0)
   const classes = useStyles()
+  const history = useHistory()
+
   const handleOnSelect = (e: any) => {
     const value = e.target.value
     console.log(value)
     setQ(prev => prev + 1)
   }
 
-  if (!tests[q]) return <></>
+  const handleMoveToResult = () => {
+    history.push('/result/bread')
+    return <></>
+  }
+
+  if (!tests[q]) return handleMoveToResult()
   return (
     <ContentsBase>
       <div className={classes.statusBar}>STATUS BAR {Math.round(((q + 1) / tests.length) * 100)}%</div>
