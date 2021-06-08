@@ -72,8 +72,13 @@ const useStyles = createUseStyles({
       fontSize: '3rem',
       textAlign: 'center'
     },
-    '&>p:first-child': {
-      marginBottom: '3rem'
+    '&>p:last-child': {
+      height: '16rem',
+      display: 'flex',
+      justifyContent: 'center',
+      alignItems: 'center',
+      fontSize: '3rem',
+      textAlign: 'center'
     }
   },
   buttonArea: {

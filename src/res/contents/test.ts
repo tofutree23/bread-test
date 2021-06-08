@@ -5,7 +5,7 @@ export interface Test {
 
 export const TestContents: Test[] = [
   {
-    question: '빵을 만드는 수업에 갔다. \n 몇 번 얼굴은 봤지만 그렇게 친한 건 아닌데.. 어떡하지?',
+    question: '빵을 만드는 수업에 갔다. 몇 번 얼굴은 봤지만 그렇게 친한 건 아닌데.. 어떡하지?',
     selection: ['모르는 사람들과 친해지려고 노력한다.', '아는 사람과 깊게 친해지려고 노력한다.']
   },
   {
