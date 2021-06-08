@@ -58,7 +58,7 @@ const useStyles = createUseStyles({
     height: '100%',
     borderRadius: '2rem',
     background: '#FFA245',
-    transition: 'width 1s'
+    transition: 'width .5s'
   },
   testParagraphArea: {
     width: '40rem',
