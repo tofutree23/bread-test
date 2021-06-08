@@ -38,8 +38,10 @@ const useStyles = createUseStyles({
     border: 0,
     fontSize: '3rem',
     marginTop: '5rem',
+    color: '#fff',
     '&:hover': {
-      cursor: 'pointer'
+      cursor: 'pointer',
+      background: '#522A02'
     }
   }
 })

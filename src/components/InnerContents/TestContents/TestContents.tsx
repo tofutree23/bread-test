@@ -27,7 +27,11 @@ const TestContents: FC<TestContentsProps> = ({ ...props }) => {
   if (!tests[q]) return handleMoveToResult()
   return (
     <ContentsBase>
-      <div className={classes.statusBar}>STATUS BAR {Math.round(((q + 1) / tests.length) * 100)}%</div>
+      <div className={classes.statusBar}>
+        {/* <progress className={classes.status} max={100} value={10} /> */}
+        <div className={classes.status} style={{ width: `${Math.round((q / tests.length) * 100)}%` }} />
+      </div>
+      {/* <div className={classes.statusBar}>STATUS BAR {}%</div> */}
       <div className={classes.testParagraphArea}>
         <p>질문 {q + 1}</p>
         <p>{tests[q].question}</p>
@@ -46,7 +50,17 @@ const TestContents: FC<TestContentsProps> = ({ ...props }) => {
 
 const useStyles = createUseStyles({
   statusBar: {
-    marginTop: '4rem'
+    marginTop: '4rem',
+    width: '80%',
+    height: '1rem',
+    background: '#fff',
+    borderRadius: '2rem'
+  },
+  status: {
+    height: '100%',
+    borderRadius: '2rem',
+    background: '#FFA245',
+    transition: 'width 1s'
   },
   testParagraphArea: {
     width: '40rem',
@@ -79,10 +93,11 @@ const useStyles = createUseStyles({
       background: '#A96E33',
       borderRadius: '2rem',
       fontSize: '2rem',
+      color: '#fff',
       border: 0,
-      cursor: 'pointer',
       '&:hover': {
-        background: 'red'
+        cursor: 'pointer',
+        background: '#522A02'
       }
     }
   }
