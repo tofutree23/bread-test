@@ -28,10 +28,8 @@ const TestContents: FC<TestContentsProps> = ({ ...props }) => {
   return (
     <ContentsBase>
       <div className={classes.statusBar}>
-        {/* <progress className={classes.status} max={100} value={10} /> */}
         <div className={classes.status} style={{ width: `${Math.round((q / tests.length) * 100)}%` }} />
       </div>
-      {/* <div className={classes.statusBar}>STATUS BAR {}%</div> */}
       <div className={classes.testParagraphArea}>
         <p>질문 {q + 1}</p>
         <p>{tests[q].question}</p>
@@ -95,8 +93,10 @@ const useStyles = createUseStyles({
       fontSize: '2rem',
       color: '#fff',
       border: 0,
-      '&:hover': {
-        cursor: 'pointer',
+      cursor: 'pointer'
+    },
+    '@media (hover: hover)': {
+      '&>button:hover': {
         background: '#522A02'
       }
     }
