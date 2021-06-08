@@ -8,6 +8,12 @@ html {
   font-family: 'tvN-Bold';
 }
 
+@media all and (max-width: 768px), (max-height: 800px) {
+  html {
+    font-size: 9px;
+  }
+}
+
 body {
   margin: 0;
   -webkit-font-smoothing: antialiased;

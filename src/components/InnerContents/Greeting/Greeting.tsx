@@ -17,7 +17,7 @@ const Greeting: FC<GreetingProps> = ({ ...props }) => {
   return (
     <ContentsBase>
       <p className={classes.title}>나는 무슨 빵일까?</p>
-      <img src={mainImage} alt="main" />
+      <img className={classes.img} src={mainImage} alt="main" />
       <button className={classes.startButton} onClick={handleStart}>
         시작하기
       </button>
@@ -30,8 +30,11 @@ const useStyles = createUseStyles({
     fontSize: '4rem',
     margin: '9rem 0 4rem'
   },
+  img: {
+    width: '25rem'
+  },
   startButton: {
-    width: '50%',
+    width: '30rem',
     height: '4rem',
     background: '#E7A05A',
     borderRadius: '28px',

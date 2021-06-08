@@ -88,7 +88,7 @@ const useStyles = createUseStyles({
     alignContent: 'center',
     flexWrap: 'wrap',
     '&>button': {
-      width: '50%',
+      width: '30rem',
       height: '5rem',
       background: '#A96E33',
       borderRadius: '2rem',

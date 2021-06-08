@@ -12,7 +12,7 @@ function App() {
 }
 
 const useStyles = createUseStyles({
-  root: { display: 'flex', flexDirection: 'column', height: '100vh' }
+  root: { display: 'flex', flexDirection: 'column', height: '100vh', width: '100vw' }
 })
 
 export default App
