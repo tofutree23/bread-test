@@ -63,7 +63,7 @@ const useStyles = createUseStyles({
   testParagraphArea: {
     width: '40rem',
     height: '22rem',
-    marginTop: '8rem',
+    marginTop: '4rem',
     background: '#FADFC4',
     borderRadius: '2rem',
     boxSizing: 'border-box',
@@ -83,8 +83,8 @@ const useStyles = createUseStyles({
   },
   buttonArea: {
     width: '100%',
-    height: '13rem',
-    marginTop: '4rem',
+    height: '12rem',
+    marginTop: '3rem',
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'space-between',

@@ -1,10 +1,12 @@
 import { FC } from 'react'
 import { createUseStyles } from 'react-jss'
+import { Adfit } from '@/components'
 
 const BottomBar: FC = () => {
   const classes = useStyles()
   return (
     <div className={classes.bottomWrapper}>
+      <Adfit />
       <p>copyright © 2021</p>
       <p>Luke&Daisy all rights reserved.</p>
       <p>이 웹사이트에는 'tvN 즐거운이야기'폰트가 적용되어 있습니다.</p>
@@ -15,7 +17,7 @@ const BottomBar: FC = () => {
 const useStyles = createUseStyles({
   bottomWrapper: {
     position: 'absolute',
-    bottom: '5rem',
+    bottom: '8rem',
     right: 0,
     left: 0,
     display: 'flex',
