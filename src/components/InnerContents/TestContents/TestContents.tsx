@@ -5,6 +5,7 @@ import { useHistory } from 'react-router-dom'
 import { TestContents as tests } from '@/res/contents/test'
 
 import ContentsBase from '@/components/ContentsBase'
+import Loading from '@/components/Loading'
 
 interface TestContentsProps {}
 
@@ -20,8 +21,11 @@ const TestContents: FC<TestContentsProps> = ({ ...props }) => {
   }
 
   const handleMoveToResult = () => {
-    history.push('/result/bread')
-    return <></>
+    setTimeout(() => {
+      // 뭔가를 계산하는 것처럼 보이게 하기 위해서 일부러 넣은 timeout
+      history.push('/result/bread')
+    }, Math.floor(Math.random() * 1000 + 2000))
+    return <Loading />
   }
 
   if (!tests[q]) return handleMoveToResult()
