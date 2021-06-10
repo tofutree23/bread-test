@@ -22,10 +22,36 @@ const TestContents: FC<TestContentsProps> = ({ ...props }) => {
   }
 
   const handleMoveToResult = () => {
-    console.log(userAns)
+    const { result } = userAns.reduce(
+      (
+        acc: {
+          [index: string]: any
+        },
+        ans,
+        index
+      ) => {
+        acc[ans] = ++acc[ans]
+        if (index === userAns.length - 1) {
+          // 개수 비교해서 내보내기
+          if (acc.i >= acc.e) acc['result'] = acc['result'].concat('i')
+          else acc['result'] = acc['result'].concat('e')
+
+          if (acc.n >= acc.s) acc['result'] = acc['result'].concat('n')
+          else acc['result'] = acc['result'].concat('s')
+
+          if (acc.t >= acc.f) acc['result'] = acc['result'].concat('t')
+          else acc['result'] = acc['result'].concat('f')
+
+          if (acc.p >= acc.j) acc['result'] = acc['result'].concat('p')
+          else acc['result'] = acc['result'].concat('j')
+        }
+        return acc
+      },
+      { i: 0, e: 0, n: 0, s: 0, t: 0, f: 0, p: 0, j: 0, result: '' }
+    )
     setTimeout(() => {
       // 뭔가를 계산하는 것처럼 보이게 하기 위해서 일부러 넣은 timeout
-      history.push('/result/bread')
+      history.push(`/result/${result}`)
     }, Math.floor(Math.random() * 1000 + 2000))
     return <Loading />
   }
