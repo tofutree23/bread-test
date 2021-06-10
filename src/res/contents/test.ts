@@ -1,61 +1,91 @@
 export interface Test {
   question: string
-  selection: string[]
+  selection: { answer: string; value: string }[]
 }
 
 export const TestContents: Test[] = [
   {
-    question: '빵을 만드는 수업에 갔다. 몇 번 얼굴은 봤지만 그렇게 친한 건 아닌데.. 어떡하지?',
-    selection: ['모르는 사람들과 친해지려고 노력한다.', '아는 사람과 깊게 친해지려고 노력한다.']
+    question: '빵을 만드는 수업에 갔다. 몇 번 얼굴을 본 사람은 있지만 그렇게 친한 건 아닌데.. 어떡하지?',
+    selection: [
+      { answer: '새로운 사람들과 친해지려고 노력한다', value: 'e' },
+      { answer: '아는 사람과 깊게 친해지려고 노력한다', value: 'i' }
+    ]
   },
   {
-    question: '나는 이런 말을 들으면 별로인 것 같다.',
-    selection: ['너 좀 엉뚱해.', '너 좀 틀에 박힌 것 같아.']
+    question: '내일 점심까지 빵을 만들어 달라는 주문을 받았다. 아직 시간은 좀 널럴하긴 한데...',
+    selection: [
+      { answer: '마감 시간에 딱 맞춰서 준비한다', value: 'j' },
+      { answer: '미리미리 시간 있을 때 준비한다', value: 'p' }
+    ]
   },
   {
-    question: '더 끌리는 단어는?',
-    selection: ['설득력있는 사람', '감동을 주는 사람']
+    question: '빵집에 왔다. 어떤 빵을 먹어볼까?',
+    selection: [
+      { answer: '누구나 좋아할 만한 무난한 빵', value: 's' },
+      { answer: '새로 나온 신상을 먼저 먹어보자', value: 'n' }
+    ]
+  },
+  {
+    question: '나는 최고의 제빵사! 어떤 빵을 구워볼까?',
+    selection: [
+      { answer: '스테디셀러가 최고지! 기존의 레시피대로 굽는다', value: 's' },
+      { answer: '나만의 시그니처를 만들겠어! 새로운 방식으로 굽는다', value: 'n' }
+    ]
+  },
+  {
+    question: '내가 더 끌리는 것', // TODO: 수정
+    selection: [
+      { answer: '일관성 있는 생각', value: 't' },
+      { answer: '조화로운 인간 관계', value: 'f' }
+    ]
+  },
+  {
+    question: '내가 빵 만들 때 더 편한 것', // TODO: 수정
+    selection: [
+      { answer: '논리적 판단', value: 't' },
+      { answer: '가치 판단', value: 'f' }
+    ]
+  },
+  {
+    question: '재료 상인이 물건을 잘못 배달했다. 전화를 해야하는데...',
+    selection: [
+      { answer: '뭐라고 말할 지 적어두고 전화한다', value: 'i' },
+      { answer: '그냥 곧장 전화한다', value: 'e' }
+    ]
+  },
+  {
+    question: '어떤 빵을 굽고 싶은가', // TODO: 수정
+    selection: [
+      { answer: '이성적인 생각이 담긴 빵', value: 't' },
+      { answer: '따뜻한 마음이 담긴 빵', value: 'f' }
+    ]
+  },
+  {
+    question: '빵 반죽을 시작합시다!',
+    selection: [
+      { answer: '레시피대로 재료를 넣는다', value: 'j' },
+      { answer: '눈에 보이는 대로 일단 넣고 본다', value: 'p' }
+    ]
+  },
+  {
+    question: '나는 어떤 걸 더 좋아할까?',
+    selection: [
+      { answer: '많은 친구들과 얕은 관계', value: 'e' },
+      { answer: '적은 친구들과 깊은 관계', value: 'i' }
+    ]
+  },
+  {
+    question: '내가 더 끌리는 빵은?',
+    selection: [
+      { answer: '조금은 투박하지만 기본적인 느낌의 빵', value: 's' },
+      { answer: '색색깔로 화려하게 장식된 빵', value: 'n' }
+    ]
+  },
+  {
+    question: '나는 보통',
+    selection: [
+      { answer: '루틴이 있는 하루가 좋아', value: 'j' },
+      { answer: '놀라운 일이 매일 일어났으면 좋겠어', value: 'p' }
+    ]
   }
 ]
-
-const defaultString: string = `질문1. 빵을 만드는 클래스에서 나는..
-a. 새로운 많은 사람들과 얘기한다
-b. 아는사람 몇몇 사람과 얘기한다
-
-질문3. 나는 이 말을 들었을때 더 별로라고 생각한다.
-a. 엉뚱한 생각을 많이한다
-b. 틀에 박힌 생각을 많이한다
-
-질문5. 내가 더 끌리는 단어는? 
-a. 설득력있는
-b. 감동적인
-
-질문7. 내가 행동하는 경향은?
-a. 다소 주의깊게 행동한다
-b. 다소 충동적으로 행동한다
-
-질문8. 사람들이 많은 자리에서 나는..
-a. 에너지를 얻으며 늦게까지 자리를 지킨다
-b. 에너지가 소모되며 일찍 자리를 뜬다
-
-질문10. 빵집에서 내가 더 관심있는 것은
-a. 실제 있는 빵이 무엇인지 
-b. 앞으로 나올 새로운 빵이 무엇인지
-
-질문12. 다른 사람에게 다가갈 때, 나는  
-a. 보편적인 무난한 빵을 주며 다가간다
-b. 개인적으로 좋아하는 빵을 주며 다가간다
-
-질문14. 나를 더 신경쓰이게 하는 것은?
-a. 완성되지 않은 반죽
-b. 한치의 오차도 없는 완벽한 반죽
-
-질문15.
-
-질문17.
-
-질문19.
-
-질문21.`
-
-console.log(defaultString)

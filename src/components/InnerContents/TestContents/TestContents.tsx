@@ -11,16 +11,18 @@ interface TestContentsProps {}
 
 const TestContents: FC<TestContentsProps> = ({ ...props }) => {
   const [q, setQ] = useState<number>(0)
+  const [userAns, setUserAns] = useState<string[]>([])
   const classes = useStyles()
   const history = useHistory()
 
   const handleOnSelect = (e: any) => {
     const value = e.target.value
-    console.log(value)
+    setUserAns(prev => [...prev, value])
     setQ(prev => prev + 1)
   }
 
   const handleMoveToResult = () => {
+    console.log(userAns)
     setTimeout(() => {
       // 뭔가를 계산하는 것처럼 보이게 하기 위해서 일부러 넣은 timeout
       history.push('/result/bread')
@@ -39,11 +41,11 @@ const TestContents: FC<TestContentsProps> = ({ ...props }) => {
         <p>{tests[q].question}</p>
       </div>
       <div className={classes.buttonArea}>
-        <button onClick={handleOnSelect} value={0}>
-          {tests[q].selection[0]}
+        <button onClick={handleOnSelect} value={tests[q].selection[0].value}>
+          {tests[q].selection[0].answer}
         </button>
-        <button onClick={handleOnSelect} value={1}>
-          {tests[q].selection[1]}
+        <button onClick={handleOnSelect} value={tests[q].selection[1].value}>
+          {tests[q].selection[1].answer}
         </button>
       </div>
     </ContentsBase>
