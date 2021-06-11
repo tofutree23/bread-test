@@ -24,7 +24,7 @@ const useStyles = createUseStyles({
   appWrapper: {
     width: '50vw',
     height: 'auto',
-    margin: '0 auto'
+    margin: '0 auto 4rem'
   }
 })
 

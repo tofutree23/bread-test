@@ -94,7 +94,7 @@ const useStyles = createUseStyles({
     transition: 'width .5s'
   },
   testParagraphArea: {
-    width: '40rem',
+    width: '38rem',
     height: '22rem',
     marginTop: '4rem',
     background: '#FADFC4',

@@ -16,8 +16,8 @@ const BottomBar: FC = () => {
 
 const useStyles = createUseStyles({
   bottomWrapper: {
-    position: 'absolute',
-    bottom: '8rem',
+    position: 'relative',
+    top: '8rem',
     right: 0,
     left: 0,
     display: 'flex',
