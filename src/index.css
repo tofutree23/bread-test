@@ -6,6 +6,7 @@
 html {
   font-size: 12px;
   font-family: 'good-day Medium';
+  user-select: none;
 }
 
 @media all and (max-width: 768px), (max-height: 800px) {

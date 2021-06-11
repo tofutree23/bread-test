@@ -27,7 +27,7 @@ const Greeting: FC<GreetingProps> = ({ ...props }) => {
 
 const useStyles = createUseStyles({
   title: {
-    fontSize: '3rem',
+    fontSize: '2.5rem',
     margin: '7rem 0 4rem'
   },
   img: {
