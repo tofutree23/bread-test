@@ -12,7 +12,7 @@ export const TestContents: Test[] = [
     ]
   },
   {
-    question: '내일 점심까지\n빵을 만들어 달라는 주문을 받았다.\n아직 시간은 좀 널럴하긴 한데...',
+    question: '내일 점심까지\n빵을 만들어 달라는 주문을 받았다.\n아직 시간은 좀 여유있긴 한데...',
     selection: [
       { answer: '마감 시간에 맞춰서 준비한다', value: 'j' },
       { answer: '아무 때나 하면 어때', value: 'p' }

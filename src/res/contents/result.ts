@@ -1,18 +1,40 @@
-export const BREAD = {
-  intj: '인티제',
-  intp: '인팁',
-  entj: '엔티제',
-  entp: '엔팁',
+type BreadProps = {
+  [key: string]: string
+}
+
+export const BREAD: BreadProps = {
+  intj: 'scone',
+  intp: 'cinnamon-roll',
+  entj: 'financier',
+  entp: 'an-butter',
   infj: 'baguette',
-  infp: '인프피',
-  enfj: '엔프제',
-  enfp: '엔프피',
-  istj: '잇티제',
-  isfj: '잇프제',
-  estj: '엣티제',
-  esfj: '엣프제',
-  istp: '잇팁',
-  isfp: '잇프피',
-  estp: '엣팁',
-  esfp: '엣프피'
+  infp: 'castella',
+  enfj: 'creampuff',
+  enfp: 'croffle',
+  istj: 'loaf-bread',
+  isfj: 'macaron',
+  estj: 'anpan',
+  esfj: 'pretzel',
+  istp: 'cheesecake',
+  isfp: 'soboro',
+  estp: 'chocolatine',
+  esfp: 'cup-cake'
+}
+
+type BreadDesc = {
+  [key: string]: string
+}
+
+type ResultBreadProps = {
+  [key: string]: BreadDesc
+}
+
+export const RESULT_BREAD: ResultBreadProps = {
+  baguette: {
+    qoute: '고즈넉한 삶이 좋아',
+    name: '바게트',
+    desc: '',
+    good: '',
+    bad: ''
+  }
 }
