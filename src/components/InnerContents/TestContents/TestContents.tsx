@@ -52,8 +52,7 @@ const TestContents: FC<TestContentsProps> = ({ ...props }) => {
     )
     setTimeout(() => {
       // 뭔가를 계산하는 것처럼 보이게 하기 위해서 일부러 넣은 timeout
-      const userBread: { [value: string]: string } = BREAD
-      history.push(`/result/${userBread[result]}`)
+      history.push(`/result/${BREAD[result]}`)
     }, Math.floor(Math.random() * 1000 + 2000))
     return <Loading />
   }
@@ -103,7 +102,7 @@ const useStyles = createUseStyles({
     boxSizing: 'border-box',
     padding: '2rem',
     '&>p': {
-      fontSize: '3rem',
+      fontSize: '2rem',
       textAlign: 'center'
     },
     '&>p:last-child': {
@@ -111,7 +110,7 @@ const useStyles = createUseStyles({
       display: 'flex',
       justifyContent: 'center',
       alignItems: 'center',
-      fontSize: '3rem',
+      fontSize: '2rem',
       textAlign: 'center',
       whiteSpace: 'pre-wrap'
     }
@@ -130,7 +129,7 @@ const useStyles = createUseStyles({
       height: '5rem',
       background: '#A96E33',
       borderRadius: '2rem',
-      fontSize: '2rem',
+      fontSize: '1.3rem',
       color: '#fff',
       border: 0,
       cursor: 'pointer'

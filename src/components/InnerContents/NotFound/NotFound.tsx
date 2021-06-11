@@ -31,7 +31,7 @@ const NotFound: FC<NotFoundProps> = () => {
 const useStyles = createUseStyles({
   root: {
     marginTop: '15rem',
-    fontSize: '3rem',
+    fontSize: '2rem',
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'center',
@@ -46,7 +46,7 @@ const useStyles = createUseStyles({
     background: '#E7A05A',
     borderRadius: '28px',
     border: 0,
-    fontSize: '3rem',
+    fontSize: '2rem',
     marginTop: '5rem',
     color: '#fff',
     '&:hover': {

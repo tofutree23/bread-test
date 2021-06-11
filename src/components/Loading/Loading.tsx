@@ -18,7 +18,7 @@ const Loading: FC = () => {
 const useStyles = createUseStyles({
   root: {
     marginTop: '15rem',
-    fontSize: '3rem'
+    fontSize: '2rem'
   },
   loadingImg: {
     width: '25rem',

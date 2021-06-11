@@ -27,7 +27,7 @@ const Greeting: FC<GreetingProps> = ({ ...props }) => {
 
 const useStyles = createUseStyles({
   title: {
-    fontSize: '4rem',
+    fontSize: '3rem',
     margin: '7rem 0 4rem'
   },
   img: {
@@ -39,7 +39,7 @@ const useStyles = createUseStyles({
     background: '#E7A05A',
     borderRadius: '28px',
     border: 0,
-    fontSize: '3rem',
+    fontSize: '2rem',
     marginTop: '5rem',
     color: '#fff',
     '&:hover': {

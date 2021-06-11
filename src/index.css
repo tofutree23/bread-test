@@ -1,11 +1,11 @@
 @font-face {
-  font-family: 'tvN-Bold';
-  src: url('../src/res/font/tvN-Bold.otf') format('opentype');
+  font-family: 'good-day Medium';
+  src: url('../src/res/font/good-day Medium.ttf') format('truetype');
 }
 
 html {
   font-size: 12px;
-  font-family: 'tvN-Bold';
+  font-family: 'good-day Medium';
 }
 
 @media all and (max-width: 768px), (max-height: 800px) {
@@ -22,7 +22,7 @@ body {
 }
 
 button {
-  font-family: 'tvN-Bold';
+  font-family: 'good-day Medium';
 }
 
 /* http://meyerweb.com/eric/tools/css/reset/ 

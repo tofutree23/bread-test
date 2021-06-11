@@ -9,7 +9,7 @@ const BottomBar: FC = () => {
       <Adfit />
       <p>copyright © 2021</p>
       <p>Luke&Daisy all rights reserved.</p>
-      <p>이 웹사이트에는 'tvN 즐거운이야기'폰트가 적용되어 있습니다.</p>
+      <p>이 웹사이트에는 '잘풀리는 오늘' 폰트가 적용되어 있습니다.</p>
     </div>
   )
 }
@@ -25,8 +25,9 @@ const useStyles = createUseStyles({
     alignItems: 'center',
     flexDirection: 'column',
     height: '5%',
-    fontSize: '1.6rem',
+    fontSize: '1rem',
     '&>p:last-child': {
+      fontSize: '.8rem',
       marginTop: '1rem',
       color: '#999999'
     }
