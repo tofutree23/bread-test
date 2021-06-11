@@ -112,7 +112,8 @@ const useStyles = createUseStyles({
       alignItems: 'center',
       fontSize: '2rem',
       textAlign: 'center',
-      whiteSpace: 'pre-wrap'
+      whiteSpace: 'pre-wrap',
+      lineHeight: '1.6'
     }
   },
   buttonArea: {
