@@ -12,7 +12,7 @@ export const TestContents: Test[] = [
     ]
   },
   {
-    question: '내일 점심까지\n빵을 만들어 달라는 주문을 받았다.\n아직 시간은 좀 여유있긴 한데...',
+    question: '내일 점심까지\n빵을 만들어 달라는 주문을 받았다.\n아직 시간은 좀 여유 있긴 한데...',
     selection: [
       { answer: '마감 시간에 맞춰서 준비한다', value: 'j' },
       { answer: '아무 때나 하면 어때', value: 'p' }
@@ -43,7 +43,7 @@ export const TestContents: Test[] = [
     question: '빵집을 어느 지역에 내는 게 좋을까?',
     selection: [
       { answer: '장사가 잘 되는 번화가', value: 't' },
-      { answer: '감성돋는 골목길', value: 'f' }
+      { answer: '감성 돋는 골목길', value: 'f' }
     ]
   },
   {
