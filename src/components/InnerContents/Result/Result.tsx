@@ -1,6 +1,8 @@
 import { FC, useEffect, useState } from 'react'
 import { createUseStyles } from 'react-jss'
 import { useParams, useHistory } from 'react-router-dom'
+import classnames from 'classnames'
+import { useSnackbar } from 'notistack'
 
 import ContentsBase from '@/components/ContentsBase'
 
@@ -11,6 +13,8 @@ interface ResultProps {}
 const Result: FC<ResultProps> = ({ ...props }) => {
   const history = useHistory()
   const [breadName, setBreadName] = useState<string>('')
+
+  const { enqueueSnackbar } = useSnackbar()
 
   const { bread } =
     useParams<{
@@ -26,6 +30,19 @@ const Result: FC<ResultProps> = ({ ...props }) => {
   const classes = useStyles()
 
   const handleClickRetry = () => history.push('/')
+
+  const handleClickCopy = () => {
+    enqueueSnackbar('주소가 카피되었어요', {
+      preventDuplicate: true,
+      autoHideDuration: 2000,
+      variant: 'success',
+      anchorOrigin: {
+        vertical: 'bottom',
+        horizontal: 'center'
+      }
+    })
+    navigator.clipboard.writeText(window.location.href)
+  }
 
   if (!breadName) return <></>
   return (
@@ -53,8 +70,8 @@ const Result: FC<ResultProps> = ({ ...props }) => {
         <div className={classes.pairingWrapper}>
           <p>잘 맞는 빵</p>
           <div>
-            {RESULT_BREAD[breadName].pair.split(',').map(item => (
-              <div>
+            {RESULT_BREAD[breadName].pair.split(',').map((item, idx) => (
+              <div key={`pair-${idx}`}>
                 <img key={item} alt={item} src={require(`@/res/image/bread/${item}.png`).default} />
                 <p>{RESULT_BREAD[item].name}</p>
               </div>
@@ -64,6 +81,9 @@ const Result: FC<ResultProps> = ({ ...props }) => {
       </div>
       <button className={classes.button} onClick={handleClickRetry}>
         테스트 다시 하기
+      </button>
+      <button className={classnames(classes.button, classes.secondBtn)} onClick={handleClickCopy}>
+        결과 링크 복사
       </button>
     </ContentsBase>
   )
@@ -143,17 +163,20 @@ const useStyles = createUseStyles({
   button: {
     width: '30rem',
     height: '5rem',
-    background: '#A96E33',
+    background: '#E7A05A',
     borderRadius: '2rem',
     fontSize: '1.3rem',
     color: '#fff',
     border: 0,
     cursor: 'pointer',
-    '@media (hover: hover)': {
-      '&:hover': {
-        background: '#522A02'
-      }
+    '&:hover': {
+      cursor: 'pointer',
+      background: '#522A02'
     }
+  },
+  secondBtn: {
+    background: '#A96E33',
+    marginTop: '4rem'
   }
 })
 

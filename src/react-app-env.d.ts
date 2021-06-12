@@ -1,4 +1,6 @@
 /// <reference types="react-scripts" />
-interface Window {
-  Kakao: any
+
+declare module 'react-simple-snackbar' {
+  SnackbarProvider: any
+  useSnackbar: any
 }
