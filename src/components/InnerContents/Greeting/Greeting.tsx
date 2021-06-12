@@ -2,6 +2,7 @@ import { FC, useCallback } from 'react'
 import { createUseStyles } from 'react-jss'
 import { useHistory } from 'react-router-dom'
 
+import { ShareSNS } from '@/components'
 import ContentsBase from '@/components/ContentsBase'
 // res
 import mainImage from '@/res/image/main.png'
@@ -21,6 +22,7 @@ const Greeting: FC<GreetingProps> = ({ ...props }) => {
       <button className={classes.startButton} onClick={handleStart}>
         시작하기
       </button>
+      <ShareSNS />
     </ContentsBase>
   )
 }
