@@ -1,46 +1,15 @@
-# Getting Started with Create React App
+# 빵 테스트
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+[테스트 하러가기](https://what-kind-of-bread.netlify.app)  
+빵을 좋아하는 개발자와 디자이너가 협심해서 만든 빵 테스트입니다.  
+각 빵 마다 떠오르는 이미지가 있어서, 그걸 사람의 MBTI에 대입해 보면  
+어떨까 싶은 생각이 들어서 제작해보게 됐어요.
 
-## Available Scripts
+폰트와 로딩 gif를 제외한 모든 이미지의 저작권은 저희에게 있습니다.
 
-In the project directory, you can run:
+## 문제 출처
 
-### `yarn start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `yarn test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `yarn build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+[dokumen.tips](https://dokumen.tips/documents/mbti-personality-type-test.html)에서 문제를 발췌했습니다.  
+물론 이곳에 있는 질문을 그대로 사용하지는 않았고 나름대로 테스트 성향에 맞도록 조정했어요.  
+하도 여러 곳에서 인용되고 있는 문서인지라 최초 출처가 어딘지는 못 찾겠네요.. ㅠㅠ  
+혹시 알고 계신 분 있다면 제보 부탁드립니다.
