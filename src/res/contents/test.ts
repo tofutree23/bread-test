@@ -21,7 +21,7 @@ export const TestContents: Test[] = [
   {
     question: '빵집에 왔다. 어떤 빵을 먹어볼까?',
     selection: [
-      { answer: '누구나 좋아할 만한 무난한 빵', value: 's' },
+      { answer: '늘 먹던 대로 무난한 빵', value: 's' },
       { answer: '새로 나온 신상을 먼저 먹어보자', value: 'n' }
     ]
   },
@@ -54,10 +54,10 @@ export const TestContents: Test[] = [
     ]
   },
   {
-    question: '내 빵을 먹은 사람들이 조금 더...',
+    question: '내 빵을 좋아하는 사람들은 왠지...',
     selection: [
-      { answer: '똑똑한 사람이 됐으면 좋겠어', value: 't' },
-      { answer: '마음이 따뜻해졌으면 좋겠어', value: 'f' }
+      { answer: '똑똑하고 유능한 사람들일 것 같아', value: 't' },
+      { answer: '마음이 따뜻하고 너그러운 사람들일 것 같아', value: 'f' }
     ]
   },
   {
