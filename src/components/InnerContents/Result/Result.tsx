@@ -16,16 +16,34 @@ const Result: FC<ResultProps> = ({ ...props }) => {
 
   const { enqueueSnackbar } = useSnackbar()
 
-  const { bread } =
-    useParams<{
-      bread: string
-    }>()
+  const { bread } = useParams<{
+    bread: string
+  }>()
 
   useEffect(() => {
     const breadName = Object.values(BREAD).find(value => value === bread)
     if (!breadName) return history.push('/404')
     setBreadName(breadName)
   }, [bread, history])
+
+  useEffect(() => {
+    if (breadName) {
+      const imageUrl = 'https://what-kind-of-bread.netlify.app' + require(`@/res/image/bread/${breadName}.png`).default
+      // @ts-ignore
+      Kakao.Link.createDefaultButton({
+        container: '#kakao-link',
+        objectType: 'feed',
+        content: {
+          title: RESULT_BREAD[breadName].name,
+          description: RESULT_BREAD[breadName].qoute,
+          imageUrl,
+          link: {
+            mobileWebUrl: `https://what-kind-of-bread.netlify.app/result/${breadName}`
+          }
+        }
+      })
+    }
+  }, [breadName])
 
   const classes = useStyles()
 
@@ -79,6 +97,9 @@ const Result: FC<ResultProps> = ({ ...props }) => {
           </div>
         </div>
       </div>
+      <button id="kakao-link" className={classnames(classes.button, classes.shareKakao)}>
+        카카오로 결과 공유하기
+      </button>
       <button className={classes.button} onClick={handleClickRetry}>
         테스트 다시 하기
       </button>
@@ -177,6 +198,14 @@ const useStyles = createUseStyles({
   secondBtn: {
     background: '#A96E33',
     marginTop: '4rem'
+  },
+  shareKakao: {
+    background: '#FEE500',
+    color: '#000000',
+    marginBottom: '4rem',
+    '&:hover': {
+      background: 'rgba(254, 229, 0, 0.4)'
+    }
   }
 })
 
