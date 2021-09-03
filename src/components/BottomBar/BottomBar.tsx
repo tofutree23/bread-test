@@ -8,7 +8,9 @@ const BottomBar: FC = () => {
     <div className={classes.bottomWrapper}>
       <Adfit />
       <p>copyright © 2021</p>
-      <p>Luke&Daisy all rights reserved.</p>
+      <p>
+        <a href="mailto:tofutree23@gmail.com">Luke&Daisy</a> all rights reserved.
+      </p>
       <p>이 웹사이트에는 '잘풀리는 오늘' 폰트가 적용되어 있습니다.</p>
     </div>
   )
