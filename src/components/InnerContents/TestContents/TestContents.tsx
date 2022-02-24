@@ -1,4 +1,4 @@
-import { FC, useState } from 'react'
+import { FC, MouseEvent, useState } from 'react'
 import { createUseStyles } from 'react-jss'
 import { useHistory } from 'react-router-dom'
 
@@ -16,8 +16,8 @@ const TestContents: FC<TestContentsProps> = ({ ...props }) => {
   const classes = useStyles()
   const history = useHistory()
 
-  const handleOnSelect = (e: any) => {
-    const value = e.target.value
+  const handleOnSelect = (e: MouseEvent<HTMLButtonElement>) => {
+    const value = e.currentTarget.value
     setUserAns(prev => [...prev, value])
     setQ(prev => prev + 1)
   }
